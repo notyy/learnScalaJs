@@ -4,7 +4,7 @@ import org.scalajs.jquery.jQuery
 
 import scala.scalajs.js.JSApp
 
-object LearningApp extends JSApp{
+object LearningApp extends JSApp {
   override def main(): Unit = {
     jQuery(setupUI _)
   }
@@ -14,7 +14,9 @@ object LearningApp extends JSApp{
   }
 
   def setupUI(): Unit = {
-    jQuery("#click-me-button").click(addClickedMessage _)
+    jQuery("""<button type="button">Click me!</button>""")
+      .click(addClickedMessage _)
+      .appendTo(jQuery("body"))
     jQuery("body").append("<p>Hello World</p>")
   }
 }
