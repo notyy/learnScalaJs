@@ -14,8 +14,8 @@ jsDependencies +=
 jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
 
 libraryDependencies ++= Seq(
-  "be.doeraene" %%% "scalajs-jquery" % "0.9.1"
-//  "com.lihaoyi" %%% "utest" % "0.3.0" % "test",
+  "be.doeraene" %%% "scalajs-jquery" % "0.9.1",
+  "com.lihaoyi" %%% "utest" % "0.4.4" % "test"
 //  "org.scala-lang" % "scala-reflect" % "2.11.8"
 )
 
