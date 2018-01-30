@@ -1,15 +1,18 @@
 package webapp
 
 import org.scalajs.jquery.jQuery
-import scala.scalajs.js.annotation.JSExportTopLevel
 
 object TutorialApp {
   def main(args: Array[String]): Unit = {
-    jQuery("body").append("<p>Hello World</p>")
+    jQuery(() => setupUI())
   }
 
-  @JSExportTopLevel("addClickedMessage")
   def addClickedMessage(): Unit = {
-    jQuery("body").append("You clicked the button!")
+    jQuery("body").append("<p>You clicked the button!</p>")
+  }
+
+  def setupUI(): Unit = {
+    jQuery("#click-me-button").click(() => addClickedMessage())
+    jQuery("body").append("<p>Hello World</p>")
   }
 }
